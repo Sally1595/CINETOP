@@ -1,0 +1,1563 @@
+/*------------------------------------RESPONSIVO----------------------------------------------*/
+.grid-container>*{
+    text-align: center;
+    border-radius: 15px;
+    padding: 10px;
+}
+.header{
+    grid-area: header;
+}
+.navbar{
+    grid-area: navbar;
+}
+.division{
+    grid-area: division;
+}
+.sidebar{
+    grid-area: sidebar;
+    background-color: cadetblue;
+}
+.articulo{
+    grid-area: articulo;
+
+}
+.footer{
+    grid-area: footer;
+}
+/*Vista para el telefono*/
+.grid-container{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: auto;
+    grid-template-areas:
+    "header"
+    "navbar"
+    "division"
+    "sidebar"
+    "articulo"
+    "footer" ;
+}
+/*Vista tablet*/
+@media(min-width:768px){
+    .grid-container{
+        grid-template-columns: auto;
+        grid-template-areas:
+        "header header"
+        "navbar navbar"
+        "division division"
+        "sidebar sidebar"
+        "articulo articulo"
+        "footer footer";
+    }
+}
+@media(min-width:900px){
+    .grid-container{
+        grid-template-columns: auto;
+        grid-template-areas:
+        "header header header"
+        "navbar navbar navbar"
+        "division division division"
+        "articulo articulo sidebar"
+        "footer footer footer";
+    }
+}
+/*--------------------------LO COMPARTEN TODAS PÁGINAS ---------------------------------------*/
+body{
+    background-color: rgba(201, 141, 201, 0.712);
+}
+.header{
+    text-align: center;
+    background-color: #bfa1dd;
+    word-spacing: 40px;
+    position: fixed;
+    top: 0;
+    width: 97%;
+    z-index: 1000;
+}
+/*Estilo de botón*/
+.botonH{
+    background-color:  #FDEAFF;
+    color: #71439e;
+    text-decoration: none; /*Quita la linea del texto*/
+    padding: .5em 1.5em; /*Tamaño del botón*/
+    border: .5px solid; /*Pone el borde al botón y elige el grosor*/
+    border-radius: 10px; /*Redondea el borde del botón*/
+    display: inline-block; /*Da espacio entre el texto y el botón*/
+    font-weight: 400; /*Grosor de la letra*/
+}
+/*Estilo al posicionarse sobre el botón*/
+.botonH:hover{
+    color: #61baad;
+    background-color: #71439e;
+}
+
+.footer{
+    display: flex;
+    justify-content:center;
+    color: aliceblue;
+    padding: 15px;
+    background-color: rgb(191, 157, 223);
+}
+.navbar{
+    margin-top: 60px;
+}
+.cine{
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-size: 3.5em;
+    color: #FFD575;
+    text-shadow: 
+        1px 1px 0 #000, /* Sombra en la esquina inferior derecha */
+        -1px -1px 0 #000, /* Sombra en la esquina superior izquierda */
+        -1px 1px 0 #000, /* Sombra en la esquina inferior izquierda */
+        1px -1px 0 #000, /* Sombra en la esquina superior derecha */
+        1px 0 0 #000, /* Sombra en la derecha */
+        -1px 0 0 #000, /* Sombra en la izquierda */
+        0 1px 0 #000, /* Sombra en la parte inferior */
+        0 -1px 0 #000; /* Sombra en la parte superior */
+}
+.contenedor{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+/*Estilo de botón*/
+.botonHorario{
+    background-color: #61baad;
+    color: #71439e;
+    text-decoration: none; /*Quita la linea del texto*/
+    padding: .5em 1.5em; /*Tamaño del botón*/
+    border: .5px solid; /*Pone el borde al botón y elige el grosor*/
+    border-radius: 10px; /*Redondea el borde del botón*/
+    display: inline-block; /*Da espacio entre el texto y el botón*/
+    font-weight: 400; /*Grosor de la letra*/
+}
+/*Estilo al posicionarse sobre el botón*/
+.botonHorario:hover{
+    color: #61baad;
+    background-color: #71439e;
+}
+.nPaginas{
+    font-size: 3em;
+    font-family:"Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    letter-spacing: 10px;
+    text-align: center;
+    color: #8e57c4;
+    text-shadow: 
+        1px 1px 0 #7a4298, /* Sombra en la esquina inferior derecha */
+        -1px -1px 0 #7a4298, /* Sombra en la esquina superior izquierda */
+        -1px 1px 0 #7a4298, /* Sombra en la esquina inferior izquierda */
+        1px -1px 0 #7a4298, /* Sombra en la esquina superior derecha */
+        1px 0 0 #7a4298, /* Sombra en la derecha */
+        -1px 0 0 #7a4298, /* Sombra en la izquierda */
+        0 1px 0 #7a4298, /* Sombra en la parte inferior */
+        0 -1px 0 #7a4298; /* Sombra en la parte superior */
+}
+/*--------------------------------------------INICIO------------------------------------------*/
+
+/*Diseño texto ventanas */
+.titulo{
+    font-size: 2.5em;
+    color: #36d4bd;
+    text-shadow: 
+        1px 1px 0 #000, /* Sombra en la esquina inferior derecha */
+        -1px -1px 0 #000, /* Sombra en la esquina superior izquierda */
+        -1px 1px 0 #000, /* Sombra en la esquina inferior izquierda */
+        1px -1px 0 #000, /* Sombra en la esquina superior derecha */
+        1px 0 0 #000, /* Sombra en la derecha */
+        -1px 0 0 #000, /* Sombra en la izquierda */
+        0 1px 0 #000, /* Sombra en la parte inferior */
+        0 -1px 0 #000; /* Sombra en la parte superior */
+}
+.subtitulo{
+    font-size: 2em;
+    color: #8a2bea;
+}
+.sub-subtitulo{
+    font-size: 1.3em;
+    color: #8a2bea;
+}
+.texto{
+    font-size: 1.2em;
+    color:  #ffe9ff;
+    text-shadow: 
+        1px 1px 0 #000, /* Sombra en la esquina inferior derecha */
+        -1px -1px 0 #000, /* Sombra en la esquina superior izquierda */
+        -1px 1px 0 #000, /* Sombra en la esquina inferior izquierda */
+        1px -1px 0 #000, /* Sombra en la esquina superior derecha */
+        1px 0 0 #000, /* Sombra en la derecha */
+        -1px 0 0 #000, /* Sombra en la izquierda */
+        0 1px 0 #000, /* Sombra en la parte inferior */
+        0 -1px 0 #000; /* Sombra en la parte superior */
+}
+.tituloCartel{
+    font-size: 1.7em;
+    color: #A2A0EB;
+    text-shadow: 
+        1px 1px 0  #5E60A9, /* Sombra en la esquina inferior derecha */
+        -1px -1px 0  #5E60A9, /* Sombra en la esquina superior izquierda */
+        -1px 1px 0  #5E60A9, /* Sombra en la esquina inferior izquierda */
+        1px -1px 0  #5E60A9, /* Sombra en la esquina superior derecha */
+        1px 0 0  #5E60A9, /* Sombra en la derecha */
+        -1px 0 0  #5E60A9, /* Sombra en la izquierda */
+        0 1px 0  #5E60A9, /* Sombra en la parte inferior */
+        0 -1px 0  #5E60A9; /* Sombra en la parte superior */
+        
+}
+.secciones{
+    font-size: 4em;
+    font-family:serif;
+    color: #8e57c4;
+    text-align: left;
+    text-shadow: 
+        1px 1px 0 #7a4298, /* Sombra en la esquina inferior derecha */
+        -1px -1px 0 #7a4298, /* Sombra en la esquina superior izquierda */
+        -1px 1px 0 #7a4298, /* Sombra en la esquina inferior izquierda */
+        1px -1px 0 #7a4298, /* Sombra en la esquina superior derecha */
+        1px 0 0 #7a4298, /* Sombra en la derecha */
+        -1px 0 0 #7a4298, /* Sombra en la izquierda */
+        0 1px 0 #7a4298, /* Sombra en la parte inferior */
+        0 -1px 0 #7a4298; /* Sombra en la parte superior */
+}
+.img_carteles{
+    margin: 13px;
+    box-shadow: 
+    6px 6px 0 #9492E1, /* Sombra en la esquina inferior derecha */
+        -1.5px 4px 0 #9492E1, /* Sombra en la esquina inferior izquierda */
+        1.5px -1px 0 #9492E1, /* Sombra en la esquina superior derecha */
+        6px 0 0 #9492E1, /* Sombra en la derecha */
+        -1px 0 0 #9492E1, /* Sombra en la izquierda */
+        0 4px 0 #9492E1, /* Sombra en la parte inferior */
+        0 -1px 0 #9492E1; /* Sombra en la parte superior */
+    border-radius: 20px;
+}
+/*ESTRENOS*/
+/*El Planeta De Los Simios ESTRENOS*/
+/* El contenedor de la ventana modal El planeta de los Simios*/
+.ventana41 {
+    display: flex; /* Muestra el elemento y convierte en un contenedor flex*/
+    position: fixed; /* Mantiene la ventana fija en la pantalla */
+    z-index: 1; /* Asegura que la ventana esté por encima de otros elementos */
+    left: 0;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Permite desplazarse si el contenido es mayor que la ventana */
+   background-color: #111111bd;
+   opacity: 0;
+   pointer-events: none;
+}
+/*Estilo mostrar ventana El planeta de los Simios*/
+.ventana41_mostrar{
+    opacity: 1;
+    pointer-events: unset;
+}
+/* Contenido de la ventana modal Desafiantes*/
+.info_contenedor41 {
+    background-color: #d4b5ebbb;
+    margin:auto; 
+    width: 90%; /* Puede ajustar el ancho de la ventana */
+    max-width: 600px;
+    max-height: 90%;
+    padding: 3em 2.5em;
+    gap: 1 em;
+    place-items: center;
+    grid-auto-columns: 100%;
+    border: 1px solid  rgba(129, 99, 158, 0.712);
+    border-radius: 60px;
+    box-shadow: 0 0 10px #61baad;
+}
+/* El botón de cierre (x) Desafiantes*/
+.cerrar41 {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.cerrar41:hover{
+    color: #8a2bea;
+    text-decoration: none;
+    cursor: pointer;
+}
+/*Elimina el margen, relleno y borde del botón Desafiantes*/
+#abrirVentanaSimios1{
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer; /*Cambia el cursor por la manita */
+}
+/*Responsivo Modales*/
+@media(max-width: 600px){
+    .info_contenedor{
+        width: 95%;
+        margin: 10% auto;
+        padding: 1em;
+    }
+    .titulo, .subtitulo, .sub-subtitulo, texto {
+        font-size: 1em;
+    }
+    .video {
+        max-height: 200px;
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+
+/*Una Jungla De Locura */
+/* El contenedor de la ventana modal una jungla de locura */
+.ventana101 {
+    display: flex; /* Muestra el elemento y convierte en un contenedor flex*/
+    position: fixed; /* Mantiene la ventana fija en la pantalla */
+    z-index: 1; /* Asegura que la ventana esté por encima de otros elementos */
+    left: 0;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Permite desplazarse si el contenido es mayor que la ventana */
+   background-color: #111111bd;
+   opacity: 0;
+   pointer-events: none;
+}
+/*Estilo mostrar ventana una jungla de locura */
+.ventana101_mostrar{
+    opacity: 1;
+    pointer-events: unset;
+}
+/* Contenido de la ventana modal una jungla de locura */
+.info_contenedor101 {
+    background-color: #d4b5ebbb;
+    margin:auto; 
+    width: 90%; /* Puede ajustar el ancho de la ventana */
+    max-width: 600px;
+    max-height: 90%;
+    padding: 3em 2.5em;
+    gap: 1 em;
+    place-items: center;
+    grid-auto-columns: 100%;
+    border: 1px solid  rgba(129, 99, 158, 0.712);
+    border-radius: 60px;
+    box-shadow: 0 0 10px #61baad;
+}
+/* El botón de cierre (x) una jungla de mentira  */
+.cerrar101 {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.cerrar101:hover{
+    color: #8a2bea;
+    text-decoration: none;
+    cursor: pointer;
+}
+/*Elimina el margen, relleno y borde del botón una jungla de mentira */
+#abrirVentanaJungla1{
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer; /*Cambia el cursor por la manita */
+}
+/*Responsivo Modales*/
+@media(max-width: 600px){
+    .info_contenedor{
+        width: 95%;
+        margin: 10% auto;
+        padding: 1em;
+    }
+    .titulo, .subtitulo, .sub-subtitulo, texto {
+        font-size: 1em;
+    }
+    .video {
+        max-height: 200px;
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+
+/*Firma Aquí*/
+/* El contenedor de la ventana modal Firma Aquí*/
+.ventana51 {
+    display: flex; /* Muestra el elemento y convierte en un contenedor flex*/
+    position: fixed; /* Mantiene la ventana fija en la pantalla */
+    z-index: 1; /* Asegura que la ventana esté por encima de otros elementos */
+    left: 0;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Permite desplazarse si el contenido es mayor que la ventana */
+   background-color: #111111bd;
+   opacity: 0;
+   pointer-events: none;
+}
+/*Estilo mostrar ventana Firma Aquí*/
+.ventana51_mostrar{
+    opacity: 1;
+    pointer-events: unset;
+}
+/* Contenido de la ventana modal Firma Aquí*/
+.info_contenedor51 {
+    background-color: #d4b5ebbb;
+    margin:auto; 
+    width: 90%; /* Puede ajustar el ancho de la ventana */
+    max-width: 600px;
+    max-height: 90%;
+    padding: 3em 2.5em;
+    gap: 1 em;
+    place-items: center;
+    grid-auto-columns: 100%;
+    border: 1px solid  rgba(129, 99, 158, 0.712);
+    border-radius: 60px;
+    box-shadow: 0 0 10px #61baad;
+}
+/* El botón de cierre (x) Firma Aquí*/
+.cerrar51 {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.cerrar51:hover{
+    color: #8a2bea;
+    text-decoration: none;
+    cursor: pointer;
+}
+/*Elimina el margen, relleno y borde del botón Firma Aquí*/
+#abrirVentanaFirma1{
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer; /*Cambia el cursor por la manita */
+}
+/*Responsivo Modales*/
+@media(max-width: 600px){
+    .info_contenedor{
+        width: 95%;
+        margin: 10% auto;
+        padding: 1em;
+    }
+    .titulo, .subtitulo, .sub-subtitulo, texto {
+        font-size: 1em;
+    }
+    .video {
+        max-height: 200px;
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+/*PREVENTA*/
+/*Amigos Imaginarios*/
+/* El contenedor de la ventana modal Amigos Imaginarios*/
+.ventana21 {
+    display: flex; /* Muestra el elemento y convierte en un contenedor flex*/
+    position: fixed; /* Mantiene la ventana fija en la pantalla */
+    z-index: 1; /* Asegura que la ventana esté por encima de otros elementos */
+    left: 0;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Permite desplazarse si el contenido es mayor que la ventana */
+   background-color: #111111bd;
+   opacity: 0;
+   pointer-events: none;
+}
+/*Estilo mostrar ventana Amigos*/
+.ventana21_mostrar{
+    opacity: 1;
+    pointer-events: unset;
+}
+/* Contenido de la ventana modal Amigos*/
+.info_contenedor21 {
+    background-color: #d4b5ebbb;
+    margin:auto; 
+    width: 90%; /* Puede ajustar el ancho de la ventana */
+    max-width: 600px;
+    max-height: 90%;
+    padding: 3em 2.5em;
+    gap: 1 em;
+    place-items: center;
+    grid-auto-columns: 100%;
+    border: 1px solid  rgba(129, 99, 158, 0.712);
+    border-radius: 60px;
+    box-shadow: 0 0 10px #61baad;
+}
+/* El botón de cierre (x) Amigos*/
+.cerrar21 {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.cerrar21:hover{
+    color: #8a2bea;
+    text-decoration: none;
+    cursor: pointer;
+}
+/*Elimina el margen, relleno y borde del botón Amigos*/
+#abrirVentanaAmigos1{
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer; /*Cambia el cursor por la manita */
+}
+/*Responsivo Modal Amigos*/
+@media(max-width: 600px){
+    .info_contenedor{
+        width: 95%;
+        margin: 10% auto;
+        padding: 1em;
+    }
+    .titulo, .subtitulo, .sub-subtitulo, texto {
+        font-size: 1em;
+    }
+    .video {
+        max-height: 200px;
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+
+
+/*Furiosa*/
+/* El contenedor de la ventana modal Furiosa*/
+.ventana61 {
+    display: flex; /* Muestra el elemento y convierte en un contenedor flex*/
+    position: fixed; /* Mantiene la ventana fija en la pantalla */
+    z-index: 1; /* Asegura que la ventana esté por encima de otros elementos */
+    left: 0;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Permite desplazarse si el contenido es mayor que la ventana */
+   background-color: #111111bd;
+   opacity: 0;
+   pointer-events: none;
+}
+/*Estilo mostrar ventana Furiosa*/
+.ventana61_mostrar{
+    opacity: 1;
+    pointer-events: unset;
+}
+/* Contenido de la ventana modal Furiosa*/
+.info_contenedor61 {
+    background-color: #d4b5ebbb;
+    margin:auto; 
+    width: 90%; /* Puede ajustar el ancho de la ventana */
+    max-width: 600px;
+    max-height: 90%;
+    padding: 3em 2.5em;
+    gap: 1 em;
+    place-items: center;
+    grid-auto-columns: 100%;
+    border: 1px solid  rgba(129, 99, 158, 0.712);
+    border-radius: 60px;
+    box-shadow: 0 0 10px #61baad;
+}
+/* El botón de cierre (x) Furiosa*/
+.cerrar61 {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.cerrar61:hover{
+    color: #8a2bea;
+    text-decoration: none;
+    cursor: pointer;
+}
+/*Elimina el margen, relleno y borde del botón Furiosa*/
+#abrirVentanaFuriosa1{
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer; /*Cambia el cursor por la manita */
+}
+/*Responsivo Modales*/
+@media(max-width: 600px){
+    .info_contenedor{
+        width: 95%;
+        margin: 10% auto;
+        padding: 1em;
+    }
+    .titulo, .subtitulo, .sub-subtitulo, texto {
+        font-size: 1em;
+    }
+    .video {
+        max-height: 200px;
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+
+/*TODAS LAS PELICULAS*/
+/*Abigail*/
+/* El contenedor de la ventana modal Abigail*/
+.ventana {
+    display: flex; /* Muestra el elemento y convierte en un contenedor flex*/
+    position: fixed; /* Mantiene la ventana fija en la pantalla */
+    z-index: 1; /* Asegura que la ventana esté por encima de otros elementos */
+    left: 0;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Permite desplazarse si el contenido es mayor que la ventana */
+   background-color: #111111bd;
+   opacity: 0;
+   pointer-events: none;
+}
+/*Estilo mostrar ventana Abigail*/
+.ventana_mostrar{
+    opacity: 1;
+    pointer-events: unset;
+}
+/* Contenido de la ventana modal Abigail*/
+.info_contenedor {
+    background-color: #d4b5ebbb;
+    margin:auto; 
+    width: 90%; /* Puede ajustar el ancho de la ventana */
+    max-width: 600px;
+    max-height: 90%;
+    padding: 3em 2.5em;
+    gap: 1 em;
+    place-items: center;
+    grid-auto-columns: 100%;
+    border: 1px solid  rgba(129, 99, 158, 0.712);
+    border-radius: 60px;
+    box-shadow: 0 0 10px #61baad;
+}
+/* El botón de cierre (x) Abigail*/
+.cerrar {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.cerrar:hover{
+    color: #8a2bea;
+    text-decoration: none;
+    cursor: pointer;
+}
+/*Elimina el margen, relleno y borde del botón Abigail*/
+#abrirVentanaAbigail{
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer; /*Cambia el cursor por la manita */
+}
+/*Responsivo Modal Abigail*/
+@media(max-width: 600px){
+    .info_contenedor{
+        width: 95%;
+        margin: 10% auto;
+        padding: 1em;
+    }
+    .titulo, .subtitulo, .sub-subtitulo, texto {
+        font-size: 1em;
+    }
+    .video {
+        max-height: 200px;
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+
+/*Amigos Imaginarios*/
+/* El contenedor de la ventana modal Amigos Imaginarios*/
+.ventana2 {
+    display: flex; /* Muestra el elemento y convierte en un contenedor flex*/
+    position: fixed; /* Mantiene la ventana fija en la pantalla */
+    z-index: 1; /* Asegura que la ventana esté por encima de otros elementos */
+    left: 0;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Permite desplazarse si el contenido es mayor que la ventana */
+   background-color: #111111bd;
+   opacity: 0;
+   pointer-events: none;
+}
+/*Estilo mostrar ventana Amigos*/
+.ventana2_mostrar{
+    opacity: 1;
+    pointer-events: unset;
+}
+/* Contenido de la ventana modal Amigos*/
+.info_contenedor2 {
+    background-color: #d4b5ebbb;
+    margin:auto; 
+    width: 90%; /* Puede ajustar el ancho de la ventana */
+    max-width: 600px;
+    max-height: 90%;
+    padding: 3em 2.5em;
+    gap: 1 em;
+    place-items: center;
+    grid-auto-columns: 100%;
+    border: 1px solid  rgba(129, 99, 158, 0.712);
+    border-radius: 60px;
+    box-shadow: 0 0 10px #61baad;
+}
+/* El botón de cierre (x) Amigos*/
+.cerrar2 {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.cerrar2:hover{
+    color: #8a2bea;
+    text-decoration: none;
+    cursor: pointer;
+}
+/*Elimina el margen, relleno y borde del botón Amigos*/
+#abrirVentanaAmigos{
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer; /*Cambia el cursor por la manita */
+}
+/*Responsivo Modal Amigos*/
+@media(max-width: 600px){
+    .info_contenedor{
+        width: 95%;
+        margin: 10% auto;
+        padding: 1em;
+    }
+    .titulo, .subtitulo, .sub-subtitulo, texto {
+        font-size: 1em;
+    }
+    .video {
+        max-height: 200px;
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+
+/*Desafiantes*/
+/* El contenedor de la ventana modal Desafiantes*/
+.ventana3 {
+    display: flex; /* Muestra el elemento y convierte en un contenedor flex*/
+    position: fixed; /* Mantiene la ventana fija en la pantalla */
+    z-index: 1; /* Asegura que la ventana esté por encima de otros elementos */
+    left: 0;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Permite desplazarse si el contenido es mayor que la ventana */
+   background-color: #111111bd;
+   opacity: 0;
+   pointer-events: none;
+}
+/*Estilo mostrar ventana Desafiantes*/
+.ventana3_mostrar{
+    opacity: 1;
+    pointer-events: unset;
+}
+/* Contenido de la ventana modal Desafiantes*/
+.info_contenedor3 {
+    background-color: #d4b5ebbb;
+    margin:auto; 
+    width: 90%; /* Puede ajustar el ancho de la ventana */
+    max-width: 600px;
+    max-height: 90%;
+    padding: 3em 2.5em;
+    gap: 1 em;
+    place-items: center;
+    grid-auto-columns: 100%;
+    border: 1px solid  rgba(129, 99, 158, 0.712);
+    border-radius: 60px;
+    box-shadow: 0 0 10px #61baad;
+}
+/* El botón de cierre (x) Desafiantes*/
+.cerrar3 {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.cerrar3:hover{
+    color: #8a2bea;
+    text-decoration: none;
+    cursor: pointer;
+}
+/*Elimina el margen, relleno y borde del botón Desafiantes*/
+#abrirVentanaDesafiantes{
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer; /*Cambia el cursor por la manita */
+}
+/*Responsivo Modales*/
+@media(max-width: 600px){
+    .info_contenedor{
+        width: 95%;
+        margin: 10% auto;
+        padding: 1em;
+    }
+    .titulo, .subtitulo, .sub-subtitulo, texto {
+        font-size: 1em;
+    }
+    .video {
+        max-height: 200px;
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+
+/*El Planeta De Los Simios*/
+/* El contenedor de la ventana modal El planeta de los Simios*/
+.ventana4 {
+    display: flex; /* Muestra el elemento y convierte en un contenedor flex*/
+    position: fixed; /* Mantiene la ventana fija en la pantalla */
+    z-index: 1; /* Asegura que la ventana esté por encima de otros elementos */
+    left: 0;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Permite desplazarse si el contenido es mayor que la ventana */
+   background-color: #111111bd;
+   opacity: 0;
+   pointer-events: none;
+}
+/*Estilo mostrar ventana El planeta de los Simios*/
+.ventana4_mostrar{
+    opacity: 1;
+    pointer-events: unset;
+}
+/* Contenido de la ventana modal el planeta de los simios*/
+.info_contenedor4 {
+    background-color: #d4b5ebbb;
+    margin:auto; 
+    width: 90%; /* Puede ajustar el ancho de la ventana */
+    max-width: 600px;
+    max-height: 90%;
+    padding: 3em 2.5em;
+    gap: 1 em;
+    place-items: center;
+    grid-auto-columns: 100%;
+    border: 1px solid  rgba(129, 99, 158, 0.712);
+    border-radius: 60px;
+    box-shadow: 0 0 10px #61baad;
+}
+/* El botón de cierre (x) el planeta de lo simios */
+.cerrar4 {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.cerrar4:hover{
+    color: #8a2bea;
+    text-decoration: none;
+    cursor: pointer;
+}
+/*Elimina el margen, relleno y borde del botón el planeta de los simios*/
+#abrirVentanaSimios{
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer; /*Cambia el cursor por la manita */
+}
+/*Responsivo Modales*/
+@media(max-width: 600px){
+    .info_contenedor{
+        width: 95%;
+        margin: 10% auto;
+        padding: 1em;
+    }
+    .titulo, .subtitulo, .sub-subtitulo, texto {
+        font-size: 1em;
+    }
+    .video {
+        max-height: 200px;
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+
+/*Firma Aquí*/
+/* El contenedor de la ventana modal Firma Aquí*/
+.ventana5 {
+    display: flex; /* Muestra el elemento y convierte en un contenedor flex*/
+    position: fixed; /* Mantiene la ventana fija en la pantalla */
+    z-index: 1; /* Asegura que la ventana esté por encima de otros elementos */
+    left: 0;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Permite desplazarse si el contenido es mayor que la ventana */
+   background-color: #111111bd;
+   opacity: 0;
+   pointer-events: none;
+}
+/*Estilo mostrar ventana Firma Aquí*/
+.ventana5_mostrar{
+    opacity: 1;
+    pointer-events: unset;
+}
+/* Contenido de la ventana modal Firma Aquí*/
+.info_contenedor5 {
+    background-color: #d4b5ebbb;
+    margin:auto; 
+    width: 90%; /* Puede ajustar el ancho de la ventana */
+    max-width: 600px;
+    max-height: 90%;
+    padding: 3em 2.5em;
+    gap: 1 em;
+    place-items: center;
+    grid-auto-columns: 100%;
+    border: 1px solid  rgba(129, 99, 158, 0.712);
+    border-radius: 60px;
+    box-shadow: 0 0 10px #61baad;
+}
+/* El botón de cierre (x) Firma Aquí*/
+.cerrar5 {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.cerrar5:hover{
+    color: #8a2bea;
+    text-decoration: none;
+    cursor: pointer;
+}
+/*Elimina el margen, relleno y borde del botón Firma Aquí*/
+#abrirVentanaFirma{
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer; /*Cambia el cursor por la manita */
+}
+/*Responsivo Modales*/
+@media(max-width: 600px){
+    .info_contenedor{
+        width: 95%;
+        margin: 10% auto;
+        padding: 1em;
+    }
+    .titulo, .subtitulo, .sub-subtitulo, texto {
+        font-size: 1em;
+    }
+    .video {
+        max-height: 200px;
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+
+/*Furiosa*/
+/* El contenedor de la ventana modal Furiosa*/
+.ventana6 {
+    display: flex; /* Muestra el elemento y convierte en un contenedor flex*/
+    position: fixed; /* Mantiene la ventana fija en la pantalla */
+    z-index: 1; /* Asegura que la ventana esté por encima de otros elementos */
+    left: 0;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Permite desplazarse si el contenido es mayor que la ventana */
+   background-color: #111111bd;
+   opacity: 0;
+   pointer-events: none;
+}
+/*Estilo mostrar ventana Furiosa*/
+.ventana6_mostrar{
+    opacity: 1;
+    pointer-events: unset;
+}
+/* Contenido de la ventana modal Furiosa*/
+.info_contenedor6 {
+    background-color: #d4b5ebbb;
+    margin:auto; 
+    width: 90%; /* Puede ajustar el ancho de la ventana */
+    max-width: 600px;
+    max-height: 90%;
+    padding: 3em 2.5em;
+    gap: 1 em;
+    place-items: center;
+    grid-auto-columns: 100%;
+    border: 1px solid  rgba(129, 99, 158, 0.712);
+    border-radius: 60px;
+    box-shadow: 0 0 10px #61baad;
+}
+/* El botón de cierre (x) Furiosa*/
+.cerrar6 {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.cerrar6:hover{
+    color: #8a2bea;
+    text-decoration: none;
+    cursor: pointer;
+}
+/*Elimina el margen, relleno y borde del botón Furiosa*/
+#abrirVentanaFuriosa{
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer; /*Cambia el cursor por la manita */
+}
+/*Responsivo Modales*/
+@media(max-width: 600px){
+    .info_contenedor{
+        width: 95%;
+        margin: 10% auto;
+        padding: 1em;
+    }
+    .titulo, .subtitulo, .sub-subtitulo, texto {
+        font-size: 1em;
+    }
+    .video {
+        max-height: 200px;
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+
+/*Garfield*/
+/* El contenedor de la ventana modal Garfield*/
+.ventana7 {
+    display: flex; /* Muestra el elemento y convierte en un contenedor flex*/
+    position: fixed; /* Mantiene la ventana fija en la pantalla */
+    z-index: 1; /* Asegura que la ventana esté por encima de otros elementos */
+    left: 0;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Permite desplazarse si el contenido es mayor que la ventana */
+   background-color: #111111bd;
+   opacity: 0;
+   pointer-events: none;
+}
+/*Estilo mostrar ventana Garfield*/
+.ventana7_mostrar{
+    opacity: 1;
+    pointer-events: unset;
+}
+/* Contenido de la ventana modal Garfield*/
+.info_contenedor7 {
+    background-color: #d4b5ebbb;
+    margin:auto; 
+    width: 90%; /* Puede ajustar el ancho de la ventana */
+    max-width: 600px;
+    max-height: 90%;
+    padding: 3em 2.5em;
+    gap: 1 em;
+    place-items: center;
+    grid-auto-columns: 100%;
+    border: 1px solid  rgba(129, 99, 158, 0.712);
+    border-radius: 60px;
+    box-shadow: 0 0 10px #61baad;
+}
+/* El botón de cierre (x) Garfield*/
+.cerrar7 {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.cerrar7:hover{
+    color: #8a2bea;
+    text-decoration: none;
+    cursor: pointer;
+}
+/*Elimina el margen, relleno y borde del botón Garfield*/
+#abrirVentanaGarfield{
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer; /*Cambia el cursor por la manita */
+}
+/*Responsivo Modales*/
+@media(max-width: 600px){
+    .info_contenedor{
+        width: 95%;
+        margin: 10% auto;
+        padding: 1em;
+    }
+    .titulo, .subtitulo, .sub-subtitulo, texto {
+        font-size: 1em;
+    }
+    .video {
+        max-height: 200px;
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+
+/*Jugaremos en el Bosque */
+/* El contenedor de la ventana modal jugaremos en el bosque */
+.ventana8 {
+    display: flex; /* Muestra el elemento y convierte en un contenedor flex*/
+    position: fixed; /* Mantiene la ventana fija en la pantalla */
+    z-index: 1; /* Asegura que la ventana esté por encima de otros elementos */
+    left: 0;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Permite desplazarse si el contenido es mayor que la ventana */
+   background-color: #111111bd;
+   opacity: 0;
+   pointer-events: none;
+}
+/*Estilo mostrar ventana jugaremos en el bosque*/
+.ventana8_mostrar{
+    opacity: 1;
+    pointer-events: unset;
+}
+/* Contenido de la ventana modal jugaremos en el bosque*/
+.info_contenedor8 {
+    background-color: #d4b5ebbb;
+    margin:auto; 
+    width: 90%; /* Puede ajustar el ancho de la ventana */
+    max-width: 600px;
+    max-height: 90%;
+    padding: 3em 2.5em;
+    gap: 1 em;
+    place-items: center;
+    grid-auto-columns: 100%;
+    border: 1px solid  rgba(129, 99, 158, 0.712);
+    border-radius: 60px;
+    box-shadow: 0 0 10px #61baad;
+}
+/* El botón de cierre (x) jugaremos en el bosque */
+.cerrar8 {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.cerrar8:hover{
+    color: #8a2bea;
+    text-decoration: none;
+    cursor: pointer;
+}
+/*Elimina el margen, relleno y borde del botón jugaremos en el bosque*/
+#abrirVentanaBosque{
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer; /*Cambia el cursor por la manita */
+}
+/*Responsivo Modales*/
+@media(max-width: 600px){
+    .info_contenedor{
+        width: 95%;
+        margin: 10% auto;
+        padding: 1em;
+    }
+    .titulo, .subtitulo, .sub-subtitulo, texto {
+        font-size: 1em;
+    }
+    .video {
+        max-height: 200px;
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+
+/*Profesión Peligro */
+/* El contenedor de la ventana modal profesión peligro */
+.ventana9 {
+    display: flex; /* Muestra el elemento y convierte en un contenedor flex*/
+    position: fixed; /* Mantiene la ventana fija en la pantalla */
+    z-index: 1; /* Asegura que la ventana esté por encima de otros elementos */
+    left: 0;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Permite desplazarse si el contenido es mayor que la ventana */
+   background-color: #111111bd;
+   opacity: 0;
+   pointer-events: none;
+}
+/*Estilo mostrar ventana profesión peligro*/
+.ventana9_mostrar{
+    opacity: 1;
+    pointer-events: unset;
+}
+/* Contenido de la ventana modal profesión peligro*/
+.info_contenedor9 {
+    background-color: #d4b5ebbb;
+    margin:auto; 
+    width: 90%; /* Puede ajustar el ancho de la ventana */
+    max-width: 600px;
+    max-height: 150%;
+    padding: 3em 2.5em;
+    gap: 1 em;
+    place-items: center;
+    grid-auto-columns: 100%;
+    border: 1px solid  rgba(129, 99, 158, 0.712);
+    border-radius: 60px;
+    box-shadow: 0 0 10px #61baad;
+}
+/* El botón de cierre (x) profesión peligro */
+.cerrar9 {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.cerrar9:hover{
+    color: #8a2bea;
+    text-decoration: none;
+    cursor: pointer;
+}
+/*Elimina el margen, relleno y borde del botón profesión peligro*/
+#abrirVentanaPeligro{
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer; /*Cambia el cursor por la manita */
+}
+/*Responsivo Modales*/
+@media(max-width: 600px){
+    .info_contenedor{
+        width: 95%;
+        margin: 10% auto;
+        padding: 1em;
+    }
+    .titulo, .subtitulo, .sub-subtitulo, texto {
+        font-size: 1em;
+    }
+    .video {
+        max-height: 200px;
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+
+/*Una Jungla De Locura */
+/* El contenedor de la ventana modal una jungla de locura */
+.ventana10 {
+    display: flex; /* Muestra el elemento y convierte en un contenedor flex*/
+    position: fixed; /* Mantiene la ventana fija en la pantalla */
+    z-index: 1; /* Asegura que la ventana esté por encima de otros elementos */
+    left: 0;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Permite desplazarse si el contenido es mayor que la ventana */
+   background-color: #111111bd;
+   opacity: 0;
+   pointer-events: none;
+}
+/*Estilo mostrar ventana una jungla de locura */
+.ventana10_mostrar{
+    opacity: 1;
+    pointer-events: unset;
+}
+/* Contenido de la ventana modal una jungla de locura */
+.info_contenedor10 {
+    background-color: #d4b5ebbb;
+    margin:auto; 
+    width: 90%; /* Puede ajustar el ancho de la ventana */
+    max-width: 600px;
+    max-height: 90%;
+    padding: 3em 2.5em;
+    gap: 1 em;
+    place-items: center;
+    grid-auto-columns: 100%;
+    border: 1px solid  rgba(129, 99, 158, 0.712);
+    border-radius: 60px;
+    box-shadow: 0 0 10px #61baad;
+}
+/* El botón de cierre (x) una jungla de mentira  */
+.cerrar10 {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.cerrar10:hover{
+    color: #8a2bea;
+    text-decoration: none;
+    cursor: pointer;
+}
+/*Elimina el margen, relleno y borde del botón una jungla de mentira */
+#abrirVentanaJungla{
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer; /*Cambia el cursor por la manita */
+}
+/*Responsivo Modales*/
+@media(max-width: 600px){
+    .info_contenedor{
+        width: 95%;
+        margin: 10% auto;
+        padding: 1em;
+    }
+    .titulo, .subtitulo, .sub-subtitulo, texto {
+        font-size: 1em;
+    }
+    .video {
+        max-height: 200px;
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+
+/*PELÍCULA DEL MES*/
+/*El Planeta De Los Simios PELÍCULA DEL MES */
+/* El contenedor de la ventana modal El planeta de los Simios*/
+.ventana42 {
+    display: flex; /* Muestra el elemento y convierte en un contenedor flex*/
+    position: fixed; /* Mantiene la ventana fija en la pantalla */
+    z-index: 1; /* Asegura que la ventana esté por encima de otros elementos */
+    left: 0;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Permite desplazarse si el contenido es mayor que la ventana */
+   background-color: #111111bd;
+   opacity: 0;
+   pointer-events: none;
+}
+/*Estilo mostrar ventana El planeta de los Simios*/
+.ventana42_mostrar{
+    opacity: 1;
+    pointer-events: unset;
+}
+/* Contenido de la ventana modal el planeta de los simios */
+.info_contenedor42 {
+    background-color: #d4b5ebbb;
+    margin:auto; 
+    width: 90%; /* Puede ajustar el ancho de la ventana */
+    max-width: 600px;
+    max-height: 90%;
+    padding: 3em 2.5em;
+    gap: 1 em;
+    place-items: center;
+    grid-auto-columns: 100%;
+    border: 1px solid  rgba(129, 99, 158, 0.712);
+    border-radius: 60px;
+    box-shadow: 0 0 10px #61baad;
+}
+/* El botón de cierre (x) el planeta de los simios */
+.cerrar42 {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.cerrar42:hover{
+    color: #8a2bea;
+    text-decoration: none;
+    cursor: pointer;
+}
+/*Elimina el margen, relleno y borde del botón el planeta de los simios */
+#abrirVentanaSimios2{
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer; /*Cambia el cursor por la manita */
+}
+/*Responsivo Modales*/
+@media(max-width: 600px){
+    .info_contenedor{
+        width: 95%;
+        margin: 10% auto;
+        padding: 1em;
+    }
+    .titulo, .subtitulo, .sub-subtitulo, texto {
+        font-size: 1em;
+    }
+    .video {
+        max-height: 200px;
+        width: 100%;
+        height: auto;
+    }
+}
+/*--------------------------------------------------HORARIOS-----------------------------------------------------*/
+.cuadroHorario{
+    background-color: rgb(242, 211, 243);
+    width: 350px;
+    height: 850px;
+    text-align: center;
+    padding: 22px;
+    margin: 15px;
+    border-radius: 60px;
+    text-align: center;
+}
+.imgHorario{
+    margin: 13px;
+    box-shadow: 
+    6px 6px 0 #9492E1, /* Sombra en la esquina inferior derecha */
+        -1.5px 4px 0 #9492E1, /* Sombra en la esquina inferior izquierda */
+        1.5px -1px 0 #9492E1, /* Sombra en la esquina superior derecha */
+        6px 0 0 #9492E1, /* Sombra en la derecha */
+        -1px 0 0 #9492E1, /* Sombra en la izquierda */
+        0 4px 0 #9492E1, /* Sombra en la parte inferior */
+        0 -1px 0 #9492E1; /* Sombra en la parte superior */
+    border-radius: 20px;
+}
+.tipoSala{
+
+    width: 80%; /* o cualquier otro ancho deseado */
+    margin: 0 auto; /* margen automático a los lados */
+}
+      
+table {
+    width: 100%; /* la tabla toma el ancho del contenedor */
+}
+th{
+    color: #5E60A9;
+}
+td{
+    color: #8A2BE2;
+}
+/*--------------------------------------------------DULCERÍA-----------------------------------------------------*/
+
+.cuadro{
+    background-color: rgb(242, 211, 243);
+    width: 350px;
+    height: 450px;
+    text-align: center;
+    padding: 22px;
+    margin: 15px;
+    border-radius: 60px;
+}
+.dulces{
+    border-radius: 30px;
+    height: 250px;
+    width: 250px;
+}
+
+/*-------------------------------------------------CONTACTANOS---------------------------------------------------*/
+
+.contenedor_formulario{
+    
+     width: 100px;
+     height: 100px;
+     padding: 10px;
+     border: 5px solid black;
+     box-sizing: content-box;
+     
+ }
+ .cuadro_formulario{
+     width: 100px;
+     height: 100px;
+     padding: 10px;
+     border: 5px solid black;
+     box-sizing: border-box;
+ }
+ 
+ .contacto{
+    text-align: center;
+    color: #A88BBD;
+}
+
+.formulario {
+    background-color: #A88BBD;
+    width: min(600px, 100%);
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+
+}
+
+.formulario fieldset {
+    border: none;
+
+}
+
+.formulario legend {
+    text-align: center;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #8A2BE2;
+
+}
+/*------------------------------------------CARTELERA---------------------------------------*/
+.cuadroCartelera{
+    background-color: rgb(242, 211, 243);
+    width: 350px;
+    height: 500px;
+    text-align: center;
+    padding: 22px;
+    margin: 15px;
+    border-radius: 60px;
+    text-align: center;
+}
+.imgCartelera{
+    margin: 13px;
+    box-shadow: 
+    6px 6px 0 #9492E1, /* Sombra en la esquina inferior derecha */
+        -1.5px 4px 0 #9492E1, /* Sombra en la esquina inferior izquierda */
+        1.5px -1px 0 #9492E1, /* Sombra en la esquina superior derecha */
+        6px 0 0 #9492E1, /* Sombra en la derecha */
+        -1px 0 0 #9492E1, /* Sombra en la izquierda */
+        0 4px 0 #9492E1, /* Sombra en la parte inferior */
+        0 -1px 0 #9492E1; /* Sombra en la parte superior */
+    border-radius: 20px;
+}
