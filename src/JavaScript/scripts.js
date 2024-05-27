@@ -575,3 +575,66 @@ function iniciarVentana42(){
 
 //Inicializar los event listeners El planeta de los simios
 window.addEventListener("DOMContentLoaded", iniciarVentana42);
+
+
+//------------------------------------------------------------------------------------------------------------------------------
+//----------------BOLETOS--------------------------------------------------------------------------------------------
+document.addEventListener('DOMContentLoaded', (event) => {
+    const contadores = document.querySelectorAll('.contenedor-contador > div');
+    
+    contadores.forEach(contadorDiv => {
+        let contador = 0;
+        const contadorDisplay = contadorDiv.querySelector('.contador');
+        const incrementoBoton = contadorDiv.querySelector('.incrementa');
+        const decrementoBoton = contadorDiv.querySelector('.decremento');
+        const resetBoton = contadorDiv.querySelector('.reset');
+
+        incrementoBoton.addEventListener('click', () => {
+            contador++;
+            contadorDisplay.textContent = contador;
+        });
+
+        decrementoBoton.addEventListener('click', () => {
+            contador--;
+            contadorDisplay.textContent = contador;
+        });
+
+        resetBoton.addEventListener('click', () => {
+            contador = 0;
+            contadorDisplay.textContent = contador;
+        });
+    });
+});
+//VENTANA COMPRA BOLETOS  -------------------------------------------------------------
+//Función para abrir ventana flotante (modal) COMPRA BOLETOS
+function abrirVentanaC (){
+    const ventanaC = document.getElementById("comprarB");
+    ventanaC.classList.add("ventanaC_mostrar");
+}
+
+//Función para cerrar ventana flotante (modal) COMPRA BOLETOS 
+function cerrarVentanaC(){
+    const ventanaC = document.getElementById("comprarB");
+    ventanaC.classList.remove("ventanaC_mostrar");
+}
+
+//Función para cerrar la ventana cuando se da click fuera del contenedor COMPRA BOLETOS 
+function fueraVentanaC(evento){
+    const ventanaC = document.getElementById("comprarB");
+    if (evento.target == ventanaC){
+        ventanaC.classList.remove("ventanaC_mostrar");
+    }
+}
+
+// Agregar los event listerners COMPRA BOLETOS
+function iniciarVentanaC(){
+    const abrirVentanaComprarB = document.getElementById("abrirVentanaComprarB");
+    const cerrarVentanaComprarB = document.querySelector(".cerrarC");
+
+    abrirVentanaComprarB.addEventListener("click", abrirVentanaC);
+    cerrarVentanaComprarB.addEventListener("click", cerrarVentanaC);
+    window.addEventListener("click", fueraVentanaC);
+}
+
+//Inicializar los event listeners COMPRA BOLETOS 
+window.addEventListener("DOMContentLoaded", iniciarVentanaC);

@@ -23,9 +23,47 @@
             <div><h1 class="cine"> Cine Top <br>Pasión por el cine </h1></div>
         </div>
     </nav>
-    <article class="articulo">
+    <div class="division">
         <h2 class="nPaginas">Boletos</h2>
-        </article>
-    
+        <div class="contenedor-contador">
+            <div id="Adulto">
+                <h3>Adulto: <span class="contador">0</span></h3>
+            <div class="botonC">
+                <button class="incrementa botonHorario">+</button>
+                <button class="decremento botonHorario">-</button>
+                <button class="reset botonHorario">Borrar</button>
+            </div> <!--class="botonC"-->
+            </div><!--id="Adulto"-->
+            <div id="AdultoM">
+                <h3>Adulto Mayor: <span class="contador">0</span></h3>
+            <div class="botonC">
+                <button class="incrementa botonHorario">+</button>
+                <button class="decremento botonHorario">-</button>
+                <button class="reset botonHorario">Borrar</button>
+            </div> <!--class="botonC"-->
+            </div><!--id="Adulto"-->
+            <div id="Niño">
+                <h3>Niño: <span class="contador">0</span></h3>
+            <div class="botonC">
+                <button class="incrementa botonHorario">+</button>
+                <button class="decremento botonHorario">-</button>
+                <button class="reset botonHorario">Borrar</button>
+            </div> <!--class="botonC"-->
+            </div><!--id="Adulto"-->
+        </div> <!--class="contenedor-contador"-->
+        <button id="abrirVentanaComprarB">Comprar</button> <!--Boton comprar-->
+        <!--Ventana Flotante (modal) -->
+        <div id="comprarB" class="ventanaC">
+            <div class="info_contenedorC">
+                <p>Gracias por tu compra</p>
+                <p>Aquí tienes tus boletos !!!</p>
+                <img src="src/Images/Boletos.webp">
+                <!--Botón para cerrar ventana flotante (modal) el planeta de los simios -->
+                <span class="cerrarC">&times;</span>
+            </div><!--class="info_contenedorC"-->
+        </div><!--id="comprarB" class="ventanaC"-->
+    </div> <!--class="division"-->
+    <script src="src/JavaScript/scripts.js"></script>
+    <footer class="footer">Todos los derechos reservados &#169 2024 CineTop, S.A. de C.V. </footer>
 </body>
 </html>
