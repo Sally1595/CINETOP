@@ -1,10 +1,10 @@
 # CINETOP
-- Box sizing
-- outline
-- Posicionamiento
-- Overflow
-- Opacity
-- Align-Content
-- Align-Items
-- Flex-shrink
-- Flex-basis
+- Box sizing: (página: contáctanos línea:1517 cuadro de contacto)
+- outline: (página: contáctanos línea: 1518 margen de contacto)
+- Posicionamiento: (página: todas las páginas (header) y modales líneas: header - 72, modal   (varias) - 1518 (ejemplo))
+- Overflow: (página:inicio y boletos líneas: 251 (ejemplo))
+- Opacity: (página:inicio y boletos líneas: 253 (ejemplo))
+- Align-Content: (página: cartelera(individual de cada película, se accede desde el inicio dando click al poster de cada pelicula y dando click al boton "horario") línea: 1544)
+- Align-Items: (página: boletos línea:1676 se utilizó para crear el botón "comprar")
+- Flex-shrink: (página: boletos línea: 1698 se utilizó para el contenedor del contador)
+- Flex-basis: (página: boletos línea: 1699 se utilizó para el contenedor del contador)
