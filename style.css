@@ -1491,46 +1491,39 @@ td{
     height: 250px;
     width: 250px;
 }
-
-/*-------------------------------------------------CONTACTANOS---------------------------------------------------*/
-
-.contenedor_formulario{
-    
-     width: 100px;
-     height: 100px;
-     padding: 10px;
-     border: 5px solid black;
-     box-sizing: content-box;
-     
- }
- .cuadro_formulario{
-     width: 100px;
-     height: 100px;
-     padding: 10px;
-     border: 5px solid black;
-     box-sizing: border-box;
- }
- 
- .contacto{
-    text-align: center;
-    color: #A88BBD;
+.botonD{
+    background-color: #a7e7dd;
+    color: #71439e;
+    text-decoration: none; /*Quita la linea del texto*/
+    padding: .5em 1.5em; /*Tamaño del botón*/
+    border: .5px solid; /*Pone el borde al botón y elige el grosor*/
+    border-radius: 10px; /*Redondea el borde del botón*/
+    display: inline-block; /*Da espacio entre el texto y el botón*/
+    font-weight: 400; /*Grosor de la letra*/
+}
+/*Estilo al posicionarse sobre el botón*/
+.botonD:hover{
+    color: #61baad;
+    background-color: #71439e;
 }
 
+/*-------------------------------------------------CONTACTANOS---------------------------------------------------*/
 .formulario {
     background-color: #A88BBD;
     width: min(600px, 100%);
     margin: 0 auto;
     padding: 20px;
     border-radius: 60px;
+    box-sizing: border-box;
+    outline: auto #1d9785;
 }
 
 .formulario fieldset {
-    border: none;
+    border:none;
 
 }
 
 .formulario legend {
-    text-align: center;
     font-size: 25px;
     text-transform: uppercase;
     font-weight: bold;
@@ -1544,15 +1537,19 @@ td{
 }
 
 /*------------------------------------------CARTELERA---------------------------------------*/
+.contenedorI{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+}
 .cuadroCartelera{
     background-color: rgb(242, 211, 243);
     width: 350px;
     height: 500px;
-    text-align: center;
     padding: 22px;
     margin: 15px;
     border-radius: 60px;
-    text-align: center;
 }
 .imgCartelera{
     margin: 13px;
@@ -1566,7 +1563,7 @@ td{
         0 -1px 0 #9492E1; /* Sombra en la parte superior */
     border-radius: 20px;
 }
-/*------------------------------------------BOLETOS---------------------------------------*/
+/*------------------------------------------COMPRAR---------------------------------------*/
 /* El contenedor de la ventana modal Boletos*/
 .ventanaC {
     display: flex; /* Muestra el elemento y convierte en un contenedor flex*/
@@ -1667,4 +1664,42 @@ td{
     max-height: 300px;
         width:190px;
         height: 250px;
+}
+/*------------------------------------------BOLETOS---------------------------------------*/
+.botonB{
+    border: 3px solid #52d1be;
+    width:120px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items:center;
+    border-radius: 15px;
+    font-size: 1.5em;
+    color: #06574b;
+    background-color: #ba8be5;
+}
+.botonB:hover{
+    border: 3px solid #ba8be5;
+    background-color: #52d1be;
+    color: #6e4891 ;
+}
+.contenedor-contador{
+    border: 3px solid #52d1be;
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.contenedor-contador div{
+    padding: 5px;
+    background: #52d1be;
+    margin: 2px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 200px;
+}
+.boletosT{
+    color: #6e4891;
+    font-size: 2.5em;
+    font-family:monospace;
 }
